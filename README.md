@@ -17,7 +17,7 @@ pip install -e .
 ```
 ## Checkpoint
 ``` sh
-mkdir data/model/pick/suction_evaluator/resnet20_32x32x6_20200616_RB_CH_cmb_0519_0522_0526_0604_0605_norm_vec
+mkdir -p data/model/pick/suction_evaluator/resnet20_32x32x6_20200616_RB_CH_cmb_0519_0522_0526_0604_0605_norm_vec
 ```
 ```sh
 https://drive.google.com/file/d/1gq5uJPu5E8rjrBqht_gnGSWr76_aiYcN/view?usp=sharing
