@@ -4,41 +4,9 @@
 ```sh
 - Ubuntu 16.04 or 18.04
 - CUDA >=10.0, CUDNN>=7
+```
+```sh
 - Pytorch >=1.4.0
-```
-## Install NVIDIA driver
-```sh
-check GPU info: 
-sudo lshw -C display or hwinfo --gfxcard --short
-Install:
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-reboot
-Open 'Software and update/ Addtional Drivers' and select proper driver
-reboot
-```
-
-## Install CUDA and CUDNN
-```sh
-- Download *.run file from https://developer.nvidia.com/cuda-toolkit-archive
-sudo sh cuda_XXX.run
-- Follow the command line promts:
-*** Note: Answer 'NO' for question "Install NVIDIA Accelerated Graphics Driver for Linux-XXX?"
-- Download CUDNN from https://developer.nvidia.com/rdp/cudnn-archive
-- Extract tar file
-sudo cp /cuda/include/* /usr/loca/cuda-XX/include
-sudo cp /cuda/lib64/* /usr/local/cuda-XX/lib64
-- Set up CUDA path
-sudo gedit ~/.bashrc
-Add 2 lines to the file:
-    PATH=/usr/local/cuda/bin:$PATH
-    LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-source  ~/.bashrc
-
-sudo gedit /etc/ld.so.conf.d/cuda.conf
-Add: /usr/local/cuda/lib64
-sudo ldconfig
-reboot
 ```
 ## Install
 ```sh
