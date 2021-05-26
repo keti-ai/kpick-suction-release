@@ -1,22 +1,4 @@
-![license](https://img.shields.io/badge/license-MIT-green) ![PyTorch-1.4.0](https://img.shields.io/badge/PyTorch-1.4.0-blue)
-# Keti SDK
-## System Requirements:
-```sh
-- Ubuntu 16.04 or 18.04
-- CUDA >=10.0, CUDNN>=7
-```
-```sh
-- Pytorch >=1.4.0
-```
-## Install
-```sh
-sudo apt install python3.6-dev
-sudo apt install python3.6-tk
-cd $ROOT
-pip install -e .
-```
-## HOW TO USE
-```sh
+
 def demo_suction_gui(cfg_path):
     from ketisdk.vision.detector.pick.suction.suction_detection import SuctionGuiDetector
     from ketisdk.sensor.realsense_sensor import get_realsense_modules
@@ -28,8 +10,6 @@ def demo_suction_gui(cfg_path):
     GUI(title='Grip Detection GUI',
         modules=[detect_module,] + get_realsense_modules(),
         )
-```
-```sh
 
 def demo_suction_without_gui():
     from ketisdk.vision.detector.pick.suction.suction_detection import SuctionDetector
@@ -73,23 +53,9 @@ def demo_suction_without_gui():
     # Show
     cv2.imshow('viewer', ret['im'][:,:,::-1])
     if cv2.waitKey()==27: exit()
-```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__=='__main__':
+    # cfg_path = 'configs/pick/suction_net.cfg'
+    # demo_suction_gui(cfg_path=cfg_path)
+    demo_suction_without_gui()
 

@@ -31,9 +31,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/keti-ai",
     packages=setuptools.find_packages(),
-    #ext_modules=cythonize('ketisdk/vision/detector/pick/suction/*',
-    #    compiler_directives={'language_level': 3}
-    #),
+    ext_modules=cythonize('ketisdk/vision/detector/pick/suction/*',
+        compiler_directives={'language_level': 3}
+    ),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
