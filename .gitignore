@@ -1,0 +1,9 @@
+data/*
+.idea/*
+ketisdk/calib/*
+ketisdk/robot/*
+ketisdk/workcell/*
+ketisdk/vision/detector/pick/grip/*
+ketisdk/vision/detector/pick/grip3/*
+ketisdk/vision/samples/*grip*
+bin/*
