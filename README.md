@@ -1,5 +1,5 @@
 ![license](https://img.shields.io/badge/license-MIT-green) ![PyTorch-1.4.0](https://img.shields.io/badge/PyTorch-1.4.0-blue)
-# Keti SDK
+# KETI SDK
 ## System Requirements:
 ```sh
 - Ubuntu 16.04 or 18.04
