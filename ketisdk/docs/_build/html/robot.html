@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>KETI_ROBOT! &mdash; my_package 1.0 문서</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="prev" title="Welcome to my_package’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> my_package
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">KETI_ROBOT!</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">my_package</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>KETI_ROBOT!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/robot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-robot">
+<span id="keti-robot"></span><h1>KETI_ROBOT!<a class="headerlink" href="#module-robot" title="제목 주소">¶</a></h1>
+<p>Modules</p>
+<hr class="docutils" />
+<dl class="py class">
+<dt id="robot.robot_master.Robot">
+<em class="property">class </em><code class="sig-prename descclassname">robot.robot_master.</code><code class="sig-name descname">Robot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ip</span></em>, <em class="sig-param"><span class="n">port</span></em>, <em class="sig-param"><span class="n">proj</span></em>, <em class="sig-param"><span class="n">workspace</span></em><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot" title="정의 주소">¶</a></dt>
+<dd><p>ROBOT 운영을 위한 기본 클래스.</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip</strong> (<em>str</em>) – 서버 ip</p></li>
+<li><p><strong>port</strong> (<em>int</em>) – 서버 port</p></li>
+<li><p><strong>proj</strong> (<em>str</em>) – project 종류 (p0:FPCB, p1:무진, p2:협동로봇, …)</p></li>
+<li><p><strong>workspace</strong> (<em>str</em>) – workspace 종류 (w0:실험실, w1:현장1, …)</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>예제:</dt><dd><p>다음과 같이 사용하세요:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">robot</span> <span class="o">=</span> <span class="n">Hcr3</span><span class="p">(</span><span class="s1">&#39;192.168.100.1&#39;</span><span class="p">,</span><span class="mi">6666</span><span class="p">,</span><span class="s1">&#39;p0&#39;</span><span class="p">,</span><span class="s1">&#39;ws0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="robot.robot_master.Robot.connect_robot">
+<em class="property">abstract </em><code class="sig-name descname">connect_robot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.connect_robot" title="정의 주소">¶</a></dt>
+<dd><p>Robot 네트워크 연결</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.disconnect_robot">
+<em class="property">abstract </em><code class="sig-name descname">disconnect_robot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.disconnect_robot" title="정의 주소">¶</a></dt>
+<dd><p>Robot 네트워크 해제</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.get_pos">
+<em class="property">abstract </em><code class="sig-name descname">get_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.get_pos" title="정의 주소">¶</a></dt>
+<dd><p>Robot 현재 pos 값 반환</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환값</dt>
+<dd class="field-odd"><p>pos_param: pos_param</p>
+</dd>
+<dt class="field-even">반환 형식</dt>
+<dd class="field-even"><p>pos_param: list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.get_rot">
+<em class="property">abstract </em><code class="sig-name descname">get_rot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.get_rot" title="정의 주소">¶</a></dt>
+<dd><p>Robot 현재 pos 값 반환</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환값</dt>
+<dd class="field-odd"><p>pos_param: pos_param</p>
+</dd>
+<dt class="field-even">반환 형식</dt>
+<dd class="field-even"><p>list (float형 6개)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.load_params">
+<em class="property">abstract </em><code class="sig-name descname">load_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.load_params" title="정의 주소">¶</a></dt>
+<dd><p>Robot parameters load</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.move_drop">
+<em class="property">abstract </em><code class="sig-name descname">move_drop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.move_drop" title="정의 주소">¶</a></dt>
+<dd><p>작업 후 위치로 로봇 이동</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.move_home">
+<em class="property">abstract </em><code class="sig-name descname">move_home</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.move_home" title="정의 주소">¶</a></dt>
+<dd><p>Home 위치로 로봇 이동</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.move_init">
+<em class="property">abstract </em><code class="sig-name descname">move_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.move_init" title="정의 주소">¶</a></dt>
+<dd><p>Init 위치로 로봇 이동</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.move_j">
+<em class="property">abstract </em><code class="sig-name descname">move_j</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">joint_param</span></em>, <em class="sig-param"><span class="n">vel</span></em>, <em class="sig-param"><span class="n">acc</span></em>, <em class="sig-param"><span class="n">time</span></em>, <em class="sig-param"><span class="n">move_wait</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.move_j" title="정의 주소">¶</a></dt>
+<dd><p>Robot joint 이동</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joint_param</strong> (<em>list</em>) – joint_param (float형 6개)</p></li>
+<li><p><strong>vel</strong> (<em>float</em>) – Robot Move 속도</p></li>
+<li><p><strong>acc</strong> (<em>float</em>) – Robot Move 가속도</p></li>
+<li><p><strong>time</strong> (<em>float</em>) – Robot Move 시간</p></li>
+<li><p><strong>move_wait</strong> (<em>bool</em>) – ROBOT 도달 보장</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>예제:</dt><dd><p>다음과 같이 사용하세요:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">robot</span><span class="o">.</span><span class="n">move_j</span><span class="p">([</span><span class="n">j1</span><span class="p">,</span><span class="n">j2</span><span class="p">,</span><span class="n">j3</span><span class="p">,</span><span class="n">j4</span><span class="p">,</span><span class="n">j5</span><span class="p">,</span><span class="n">j6</span><span class="p">],</span><span class="mi">800</span><span class="p">,</span><span class="mi">1200</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.move_l">
+<em class="property">abstract </em><code class="sig-name descname">move_l</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pose_param</span></em>, <em class="sig-param"><span class="n">vel</span></em>, <em class="sig-param"><span class="n">acc</span></em>, <em class="sig-param"><span class="n">time</span></em>, <em class="sig-param"><span class="n">move_wait</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.move_l" title="정의 주소">¶</a></dt>
+<dd><p>Robot 직선 이동</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose_param</strong> (<em>list</em>) – pos_param (float형 6개)</p></li>
+<li><p><strong>vel</strong> (<em>float</em>) – Robot Move 속도</p></li>
+<li><p><strong>acc</strong> (<em>float</em>) – Robot Move 가속도</p></li>
+<li><p><strong>time</strong> (<em>float</em>) – Robot Move 시간</p></li>
+<li><p><strong>move_wait</strong> (<em>bool</em>) – ROBOT 도달 보장</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>예제:</dt><dd><p>다음과 같이 사용하세요:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">robot</span><span class="o">.</span><span class="n">move_l</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">lx</span><span class="p">,</span><span class="n">ly</span><span class="p">,</span><span class="n">lz</span><span class="p">],</span><span class="mi">800</span><span class="p">,</span><span class="mi">1200</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.reload_params">
+<em class="property">abstract </em><code class="sig-name descname">reload_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.reload_params" title="정의 주소">¶</a></dt>
+<dd><p>Robot parameters reload</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.save_params">
+<em class="property">abstract </em><code class="sig-name descname">save_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.save_params" title="정의 주소">¶</a></dt>
+<dd><p>Robot parameters save</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.set_drop_pos">
+<em class="property">abstract </em><code class="sig-name descname">set_drop_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.set_drop_pos" title="정의 주소">¶</a></dt>
+<dd><p>Robot 프로그램 작업 후 위치 설정.</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><p><strong>pos_param</strong> (<em>list</em>) – pos_param (float형 6개)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.set_home_rot">
+<em class="property">abstract </em><code class="sig-name descname">set_home_rot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.set_home_rot" title="정의 주소">¶</a></dt>
+<dd><p>Robot 초기 세팅 위치 설정.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param pos_param</dt>
+<dd class="field-odd"><p>pos_param (float형 6개)</p>
+</dd>
+<dt class="field-even">type pos_param</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.set_init_pos">
+<em class="property">abstract </em><code class="sig-name descname">set_init_pos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos_param</span></em><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.set_init_pos" title="정의 주소">¶</a></dt>
+<dd><p>Robot 프로그램 초기 위치 설정.</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><p><strong>pos_param</strong> (<em>list</em>) – pos_param (float형 6개)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.stop">
+<em class="property">abstract </em><code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.stop" title="정의 주소">¶</a></dt>
+<dd><p>로봇 스탑 함수</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.turn_off_io">
+<em class="property">abstract </em><code class="sig-name descname">turn_off_io</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ioNum</span></em><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.turn_off_io" title="정의 주소">¶</a></dt>
+<dd><p>Robot io 전원 OFF</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><p><strong>ioNum</strong> (<em>int</em>) – Robot IO</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="robot.robot_master.Robot.turn_on_io">
+<em class="property">abstract </em><code class="sig-name descname">turn_on_io</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ioNum</span></em><span class="sig-paren">)</span><a class="headerlink" href="#robot.robot_master.Robot.turn_on_io" title="정의 주소">¶</a></dt>
+<dd><p>Robot io 전원 ON</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><p><strong>ioNum</strong> (<em>int</em>) – Robot IO</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to my_package’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, jgh.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
