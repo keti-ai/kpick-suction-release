@@ -22,7 +22,7 @@ cd kpick-suction-release
 ### set virtual env
 ```
 virtualenv venv --python=python3.6
-sourch venv/bin/activate
+source venv/bin/activate
 ```
 ### install pytorch and Cython
 #### pytorch (pytorch >= 1.4.0, pytorch version ref. https://pytorch.org/get-started/previous-versions/ )
