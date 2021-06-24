@@ -1,20 +1,6 @@
 ![license](https://img.shields.io/badge/license-MIT-green) ![PyTorch-1.4.0](https://img.shields.io/badge/PyTorch-1.4.0-blue)
 # KETI SDK
-<<<<<<< HEAD
-## System Requirements:
-```sh
-- Ubuntu 16.04 or 18.04
-- CUDA >=10.0, CUDNN>=7
-```
-```sh
-- Pytorch >=1.4.0
-```
-## Install
-```sh
-sudo apt install python3.6-dev
-sudo apt install python3.6-tk
-cd $ROOT
-=======
+
 ## System Requirements and prerequiste
 ```sh
 - Ubuntu 16.04 or 18.04
