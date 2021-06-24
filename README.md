@@ -1,5 +1,6 @@
 ![license](https://img.shields.io/badge/license-MIT-green) ![PyTorch-1.4.0](https://img.shields.io/badge/PyTorch-1.4.0-blue)
 # KETI SDK
+<<<<<<< HEAD
 ## System Requirements:
 ```sh
 - Ubuntu 16.04 or 18.04
@@ -13,6 +14,43 @@
 sudo apt install python3.6-dev
 sudo apt install python3.6-tk
 cd $ROOT
+=======
+## System Requirements and prerequiste
+```sh
+- Ubuntu 16.04 or 18.04
+- CUDA >=10.0, CUDNN>=7
+
+### install python 3.6 packages
+
+sudo apt install python3.6-dev
+sudo apt install python3.6-tk
+```
+
+## Install SDK
+
+---
+
+```sh
+git clone https://github.com/keti-ai/kpick-suction-release.git
+cd kpick-suction-release
+```
+### set virtual env
+```
+virtualenv venv --python=python3.6
+source venv/bin/activate
+```
+### install pytorch and Cython
+#### pytorch (pytorch >= 1.4.0, pytorch version ref. https://pytorch.org/get-started/previous-versions/ )
+``` sh
+pip install $pytorch_version$
+```
+#### Cython
+```sh
+pip install Cython
+```
+### install KETI SDK
+```
+>>>>>>> 14af7797bc61bde8e77cf7c56c80dd997b4a388a
 pip install -e .
 ```
 ## Checkpoint
@@ -102,3 +140,7 @@ def demo_suction_without_gui():
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 14af7797bc61bde8e77cf7c56c80dd997b4a388a

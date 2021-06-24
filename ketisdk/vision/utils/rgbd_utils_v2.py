@@ -359,8 +359,8 @@ class RGBD(BasDataObj):
     def draw_workspace(self, im):
         if self.workspace is None: return im
         for i in range(len(self.workspace.pts) - 1):
-            cv2.line(im, tuple(self.workspace.pts[i,:]), tuple(self.workspace.pts[i+1,:]), (0,255,0), 2)
-        cv2.line(im, tuple(self.workspace.pts[-1,:]), tuple(self.workspace.pts[0,:]), (0,255,0), 2)
+            cv2.line(im, tuple(self.workspace.pts[i]), tuple(self.workspace.pts[i+1]), (0,255,0), 2)
+        cv2.line(im, tuple(self.workspace.pts[-1]), tuple(self.workspace.pts[0]), (0,255,0), 2)
 
         # bound_margin_locs = np.where(self.workspace.get_bound_margin())
         # im[bound_margin_locs] = (255,0,0)

@@ -12,10 +12,11 @@ class BaseGraspDetector(RoiCifarClassfier):
         super().load_params(args=args)
         self.transform = transforms.Compose([transforms.ToTensor(),
                                              transforms.Normalize(self.args.net.db_mean, self.args.net.db_std), ])
-        if hasattr(self.args,'bg_depth_file'):
+        if hasattr(self.args.net,'bg_depth_file'):
             assert os.path.exists(self.args.net.bg_depth_file)
-            self.bg_depth = cv2.blur(cv2.imread(self.args.net.bg_depth_file, cv2.IMREAD_GRAYSCALE),
+            self.bg_depth = cv2.blur(cv2.imread(self.args.net.bg_depth_file, cv2.IMREAD_UNCHANGED),
                                      ksize=self.args.net.depth_blur_ksize).astype('float')
+            print('backgpund file loaded...')
 
     def get_background_depth_map(self, rgbd):
         self.bg_depth = cv2.blur(rgbd.depth, ksize=self.args.net.depth_blur_ksize).astype('float')
