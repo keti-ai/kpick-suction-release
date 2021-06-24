@@ -7,7 +7,6 @@
 - CUDA >=10.0, CUDNN>=7
 
 ### install python 3.6 packages
-
 sudo apt install python3.6-dev
 sudo apt install python3.6-tk
 ```
@@ -36,7 +35,6 @@ pip install Cython
 ```
 ### install KETI SDK
 ```
->>>>>>> 14af7797bc61bde8e77cf7c56c80dd997b4a388a
 pip install -e .
 ```
 ## Checkpoint
@@ -107,26 +105,3 @@ def demo_suction_without_gui():
     cv2.imshow('viewer', ret['im'][:,:,::-1])
     if cv2.waitKey()==27: exit()
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 14af7797bc61bde8e77cf7c56c80dd997b4a388a
